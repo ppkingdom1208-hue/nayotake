@@ -25,10 +25,10 @@
             color: var(--text-white);
             font-family: 'Lexend', 'Noto Sans JP', sans-serif;
             line-height: 1.7;
-            /* 変な改行を防ぐ設定 */
-            word-break: auto-phrase;
-            overflow-wrap: break-word;
         }
+
+        /* 改行を制御するためのクラス */
+        .nobr { display: inline-block; white-space: nowrap; }
 
         .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -100,14 +100,13 @@
         }
         .sns-btn:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold-primary); }
 
-        /* スマホ向け調整：改行問題の修正 */
         @media (max-width: 480px) {
-            .hero h1 { font-size: 1.4rem; }
-            .profile-box p { font-size: 0.85rem; } /* プロフィール文を少し小さく */
-            .card { padding: 20px; } /* 余白を詰めて横幅を確保 */
+            .hero h1 { font-size: 1.35rem; }
+            .profile-box p { font-size: 0.82rem; letter-spacing: 0; } /* さらに少し縮小 */
+            .card { padding: 20px; }
             .price-row { flex-direction: column; gap: 5px; }
             .sns-grid { grid-template-columns: 1fr; }
-            .btn-payment { font-size: 0.8rem; padding: 15px 10px; } /* アズカリボタンの文字を調整 */
+            .btn-payment { font-size: 0.78rem; padding: 15px 8px; }
         }
     </style>
 </head>
@@ -124,7 +123,7 @@
         <section class="profile-box fade-in">
             <img src="https://cdn.discordapp.com/attachments/881399139831779372/1472841589377335428/Ohox2gdR_400x400.jpg?ex=69940a1e&is=6992b89e&hm=d2ff6d49d472b4dc73671f0d28bffa78fa8ca31fa843298ce2406b0314dcab79&" class="profile-img" alt="Icon">
             <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; letter-spacing: 0.1em;">🎋ナヨタケ🎋</p>
-            <p style="font-size: 0.95rem; opacity: 0.9;">好きなもん描いてます。イラスト投稿メインに活動中。</p>
+            <p style="font-size: 0.95rem; opacity: 0.9;">好きなもん描いてます。イラスト投稿メインに<span class="nobr">活動中。</span></p>
         </section>
 
         <section class="card fade-in">
@@ -138,7 +137,7 @@
                 <b>⚠️ 注意点</b><br>
                 ・一部規制表現（過度な性的表現等）は不可。<br>
                 ・二次創作/FAは作品元のガイドラインを必ずご確認ください。<br>
-                ・<b>リテイクは一切禁止。</b>直接的なDM相談や金銭授受も原則禁止です。
+                ・<span class="nobr"><b>リテイクは一切禁止。</b></span>直接的なDM相談や金銭授受も原則禁止です。
             </div>
             <a href="https://skeb.jp/@nayonayo0818" target="_blank" class="btn">REQUEST VIA SKEB</a>
         </section>
@@ -161,7 +160,7 @@
             </p>
 
             <a href="https://azkari.jp/creator/" target="_blank" class="btn btn-payment">
-                <i class="fa-solid fa-credit-card"></i> お支払い方法はこちら（アズカリ）
+                <i class="fa-solid fa-credit-card"></i> <span class="nobr">お支払い方法はこちら（アズカリ）</span>
             </a>
 
             <div class="warning-box">
