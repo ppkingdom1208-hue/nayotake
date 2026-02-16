@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUSTRATION COMMISSION | NAYOTAKE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #050706;
+            --gold-primary: #d4af37;
+            --gold-bright: #f9e2af;
+            --text-white: #ffffff;
+            --accent-red: #ff4d4d;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-black);
+            background-image: 
+                radial-gradient(circle at 15% 25%, rgba(212, 175, 55, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 85% 75%, rgba(212, 175, 55, 0.15) 0%, transparent 30%),
+                url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            color: var(--text-white);
+            font-family: 'Lexend', 'Noto Sans JP', sans-serif;
+            line-height: 1.7;
+        }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .hero {
+            height: 25vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 1.8rem; letter-spacing: 0.15em; color: var(--gold-primary); margin: 0; font-weight: 700; }
+
+        .container { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+
+        .profile-box { text-align: center; margin-bottom: 50px; }
+        .profile-img {
+            width: 110px; height: 110px; border-radius: 50%;
+            border: 2px solid var(--gold-primary); object-fit: cover;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .card {
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 30px; margin-bottom: 35px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .card-title {
+            color: var(--gold-primary); font-size: 1.4rem; font-weight: 700;
+            border-left: 6px solid var(--gold-primary); padding-left: 15px; margin-bottom: 15px;
+        }
+
+        .recommend-tag {
+            background: var(--gold-primary); color: var(--bg-black);
+            display: inline-block; padding: 3px 12px; font-size: 0.85rem;
+            font-weight: 700; margin-bottom: 15px;
+        }
+
+        .price-row {
+            display: flex; justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0; font-weight: 700; font-size: 1rem;
+        }
+        .price-value { color: var(--gold-bright); }
+
+        .warning-box {
+            background: rgba(255, 77, 77, 0.1); border: 1px solid var(--accent-red);
+            padding: 18px; margin-top: 25px; font-size: 0.9rem;
+        }
+        .warning-box b { color: var(--accent-red); font-size: 1.1rem; }
+
+        .btn {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            text-align: center; padding: 18px; margin-top: 20px;
+            background: transparent; border: 1px solid var(--gold-primary);
+            color: var(--gold-primary); text-decoration: none; font-weight: 700;
+            transition: 0.3s; letter-spacing: 0.05em;
+        }
+        .btn:hover { background: var(--gold-primary); color: var(--bg-black); }
+        
+        .btn-payment { border-color: #6fb8d2; color: #6fb8d2; font-size: 0.9rem; }
+        .btn-payment:hover { background: #6fb8d2; color: white; }
+
+        .sns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 50px; }
+        .sns-btn {
+            border: 1px solid rgba(212, 175, 55, 0.4); color: var(--gold-bright);
+            text-align: center; padding: 15px; text-decoration: none; font-size: 0.9rem; 
+            font-weight: 700; transition: 0.3s;
+        }
+        .sns-btn:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold-primary); }
+
+        /* スマホ向け調整 */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.4rem; }
+            .price-row { flex-direction: column; gap: 5px; }
+            .sns-grid { grid-template-columns: 1fr; } /* ボタンを縦並びにして押しやすく */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="fade-in">
+            <h1>ILLUSTRATION COMMISSION</h1>
+            <p style="font-size: 0.8rem; letter-spacing: 0.3em; color: var(--gold-bright); margin-top: 10px;">GUIDE & CONTACT</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="profile-box fade-in">
+            <img src="https://cdn.discordapp.com/attachments/881399139831779372/1472841589377335428/Ohox2gdR_400x400.jpg?ex=69940a1e&is=6992b89e&hm=d2ff6d49d472b4dc73671f0d28bffa78fa8ca31fa843298ce2406b0314dcab79&" class="profile-img" alt="Icon">
+            <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; letter-spacing: 0.1em;">🎋ナヨタケ🎋</p>
+            <p style="font-size: 0.95rem; opacity: 0.9;">好きなもん描いてます。イラスト投稿メインに活動中。</p>
+        </section>
+
+        <section class="card fade-in">
+            <div class="card-title">Skeb (スケブ)</div>
+            <div class="recommend-tag">推奨：一般の方・一次創作・個人アイコン</div>
+            <p style="font-size: 0.95rem;">
+                直接DMで依頼するよりも比較的安価にご依頼いただけます。<br>
+                “ご依頼内容をもと”に【ナヨタケ】のセンスで描かせていただく形式です。
+            </p>
+            <div class="warning-box">
+                <b>⚠️ 注意点</b><br>
+                ・一部規制表現（過度な性的表現等）は不可。<br>
+                ・二次創作/FAは作品元のガイドラインを必ずご確認ください。<br>
+                ・<b>リテイクは一切禁止。</b>直接的なDM相談や金銭授受も原則禁止です。
+            </div>
+            <a href="https://skeb.jp/@nayonayo0818" target="_blank" class="btn">REQUEST VIA SKEB</a>
+        </section>
+
+        <section class="card fade-in">
+            <div class="card-title">DM (直接) 依頼</div>
+            <div class="recommend-tag" style="background: var(--accent-red); color: white; border:none;">⚠️ 前払い制</div>
+            
+            <div class="price-row">
+                <span>YouTube・商業・動画用</span>
+                <span class="price-value">¥15,000 〜</span>
+            </div>
+            <div class="price-row">
+                <span>二次創作・FA等</span>
+                <span class="price-value">¥5,000 〜</span>
+            </div>
+
+            <p style="font-size: 0.95rem; margin-top: 20px;">
+                Skebでは対応できない詳細なご希望に合わせて制作いたします。リテイク、レイヤー分け、表情差分等も対応可能です。
+            </p>
+
+            <a href="https://azkari.jp/creator/" target="_blank" class="btn btn-payment">
+                <i class="fa-solid fa-credit-card"></i> お支払い方法はこちら（アズカリ）
+            </a>
+
+            <div class="warning-box">
+                <b>⚠️ 注意点</b><br>
+                ・Skebで依頼したイラストに関する内容はDMでは取り扱いできません。
+            </div>
+            
+            <a href="mailto:bamboo.boo.0818@gmail.com" class="btn">
+                <i class="fa-regular fa-envelope"></i> SEND EMAIL / DM
+            </a>
+        </section>
+
+        <div class="sns-grid fade-in">
+            <a href="https://twitter.com/nayo_take_0818" target="_blank" class="sns-btn"><i class="fa-brands fa-x-twitter"></i> X</a>
+            <a href="https://www.pixiv.net/users/7932609" target="_blank" class="sns-btn">PIXIV</a>
+            <a href="https://marshmallow-qa.com/btr9lq65ojwgz8m" target="_blank" class="sns-btn">MARSHMALLOW</a>
+        </div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
