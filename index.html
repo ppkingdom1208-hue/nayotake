@@ -25,6 +25,9 @@
             color: var(--text-white);
             font-family: 'Lexend', 'Noto Sans JP', sans-serif;
             line-height: 1.7;
+            /* 変な改行を防ぐ設定 */
+            word-break: auto-phrase;
+            overflow-wrap: break-word;
         }
 
         .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease; }
@@ -86,7 +89,7 @@
         }
         .btn:hover { background: var(--gold-primary); color: var(--bg-black); }
         
-        .btn-payment { border-color: #6fb8d2; color: #6fb8d2; font-size: 0.9rem; }
+        .btn-payment { border-color: #6fb8d2; color: #6fb8d2; font-size: 0.85rem; }
         .btn-payment:hover { background: #6fb8d2; color: white; }
 
         .sns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 50px; }
@@ -97,11 +100,14 @@
         }
         .sns-btn:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold-primary); }
 
-        /* スマホ向け調整 */
+        /* スマホ向け調整：改行問題の修正 */
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.4rem; }
+            .profile-box p { font-size: 0.85rem; } /* プロフィール文を少し小さく */
+            .card { padding: 20px; } /* 余白を詰めて横幅を確保 */
             .price-row { flex-direction: column; gap: 5px; }
-            .sns-grid { grid-template-columns: 1fr; } /* ボタンを縦並びにして押しやすく */
+            .sns-grid { grid-template-columns: 1fr; }
+            .btn-payment { font-size: 0.8rem; padding: 15px 10px; } /* アズカリボタンの文字を調整 */
         }
     </style>
 </head>
