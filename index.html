@@ -25,9 +25,10 @@
             color: var(--text-white);
             font-family: 'Lexend', 'Noto Sans JP', sans-serif;
             line-height: 1.7;
+            overflow-x: hidden; /* スマホでの横揺れ防止 */
         }
 
-        /* 改行を制御するためのクラス */
+        /* 改行制御 */
         .nobr { display: inline-block; white-space: nowrap; }
 
         .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease; }
@@ -35,12 +36,12 @@
 
         .hero {
             height: 25vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center;
+            text-align: center; padding: 20px;
         }
 
         .hero h1 { font-size: 1.8rem; letter-spacing: 0.15em; color: var(--gold-primary); margin: 0; font-weight: 700; }
 
-        .container { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+        .container { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; box-sizing: border-box; }
 
         .profile-box { text-align: center; margin-bottom: 50px; }
         .profile-img {
@@ -54,6 +55,7 @@
             background: rgba(255, 255, 255, 0.04);
             padding: 30px; margin-bottom: 35px;
             backdrop-filter: blur(5px);
+            word-wrap: break-word; /* テキスト溢れ防止 */
         }
         
         .card-title {
@@ -86,6 +88,7 @@
             background: transparent; border: 1px solid var(--gold-primary);
             color: var(--gold-primary); text-decoration: none; font-weight: 700;
             transition: 0.3s; letter-spacing: 0.05em;
+            box-sizing: border-box;
         }
         .btn:hover { background: var(--gold-primary); color: var(--bg-black); }
         
@@ -100,13 +103,15 @@
         }
         .sns-btn:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold-primary); }
 
+        /* モバイル最適化 */
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.35rem; }
-            .profile-box p { font-size: 0.82rem; letter-spacing: 0; } /* さらに少し縮小 */
+            .profile-box p { font-size: 0.82rem; letter-spacing: 0; }
             .card { padding: 20px; }
-            .price-row { flex-direction: column; gap: 5px; }
+            .price-row { flex-direction: column; gap: 5px; align-items: flex-start; }
             .sns-grid { grid-template-columns: 1fr; }
             .btn-payment { font-size: 0.78rem; padding: 15px 8px; }
+            .btn { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -121,7 +126,7 @@
 
     <div class="container">
         <section class="profile-box fade-in">
-            <img src="https://cdn.discordapp.com/attachments/881399139831779372/1472841589377335428/Ohox2gdR_400x400.jpg?ex=69940a1e&is=6992b89e&hm=d2ff6d49d472b4dc73671f0d28bffa78fa8ca31fa843298ce2406b0314dcab79&" class="profile-img" alt="Icon">
+            <img src="Ohox2gdR_400x400.jpg" class="profile-img" alt="ナヨタケ アイコン">
             <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; letter-spacing: 0.1em;">🎋ナヨタケ🎋</p>
             <p style="font-size: 0.95rem; opacity: 0.9;">好きなもん描いてます。イラスト投稿メインに<span class="nobr">活動中。</span></p>
         </section>
